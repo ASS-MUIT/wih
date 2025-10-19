@@ -1,16 +1,3 @@
-# Work Item Handler para la consulta de atributos de un recurso ``Appointment``
-## Desarrollo
-Este work item handler se ha generado utilizando el arquetipo maven ``org.jbp.jbpm-workitems-archetype`` en su versión ``7.74.1.Final``
-
-Necesita jdk11, por lo que la variable ``JAVA_HOME`` debe referenciar la ubicación de este jdk, por ejemplo en windows se puede usar ``$env:JAVA_HOME='C:\Program Files\Java\jdk-11.0.4'``
-
-## Funcionalidad
-
-Se usa como ejemplo de work item handler en la asignatura Arquitecturas de servicios sanitarios
-
-Recibe como parámetro de entrada la URL de un recurso ``Appointment`` en un servidor FHIR, versión R5, y devuelve el médico y paciente de dicha cita
-
-```markdown
 # 🩺 Work Item Handler for querying attributes of an ``Appointment`` resource
 
 <!-- Badges -->
@@ -25,6 +12,7 @@ Requires JDK 11 — the ``JAVA_HOME`` environment variable must point to a JDK 1
 ```powershell
 $env:JAVA_HOME = 'C:\Program Files\Java\jdk-11.0.4'
 ```
+
 
 ## Functionality
 
