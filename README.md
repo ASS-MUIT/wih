@@ -16,7 +16,7 @@ $env:JAVA_HOME = 'C:\Program Files\Java\jdk-11.0.4'
 
 ## Functionality
 
-Used as an example work item handler in the course "Architectures of Healthcare Services".
+Used as an example work item handler in the course "Healthcare Services Architectures".
 
 It accepts as input the URL of an ``Appointment`` resource on an R5 FHIR server and returns the practitioner (doctor) and the patient for that appointment.
 
