@@ -10,27 +10,56 @@ Se usa como ejemplo de work item handler en la asignatura Arquitecturas de servi
 
 Recibe como parámetro de entrada la URL de un recurso ``Appointment`` en un servidor FHIR, versión R5, y devuelve el médico y paciente de dicha cita
 
-## Verificación
+```markdown
+# 🩺 Work Item Handler for querying attributes of an ``Appointment`` resource
 
-Para las pruebas se ha creado un recurso ``Appointment`` en el servidor de test público de hapi fhir.``https://hapi.fhir.org/baseR5/Appointment/773551`` El fichero ``Appointment`` muestra una representación json de dicho recurso.
+<!-- Badges -->
+[![Java](https://img.shields.io/badge/Java-11-blue.svg)](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html) [![jBPM Workitems Archetype](https://img.shields.io/badge/jBPM--Workitems-7.74.1.Final-orange.svg)](https://www.jbpm.org) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
-Además en la carpeta resources se presentan varias representaciones de recursos en ficheros .json, que pueden ser de ayuda para ejecutar el ejercicio propuesto, y un fichero docker compose que permite arrancar un servidor FHIR R5 en un contenedor docker. 
+## Development
 
-Así, al ejecutar en modo administrador ``docker compose up -d`` se levantará un contenedor y el servidor FHIR estará disponible en la url ``http://localhost:8888/fhir``
+This work item handler was generated using the Maven archetype ``org.jbp.jbpm-workitems-archetype`` version ``7.74.1.Final``.
 
-## Ejercicio propuesto
-Haga un fork de este repositorio en su espacio GitHub
+Requires JDK 11 — the ``JAVA_HOME`` environment variable must point to a JDK 11 installation. For example, on Windows PowerShell:
 
-Clone el repositorio localmente
+```powershell
+$env:JAVA_HOME = 'C:\Program Files\Java\jdk-11.0.4'
+```
 
-Levante el servidor FHIR R5 en su equipo, usando el docker compose proporcionado
+## Functionality
 
-Cree los recursos referenciados en la representación ``Appointment.json`` proporcionada en la carpeta ``resources`` de los tests. En esta carpeta se le dan también diferentes ejemplos de representaciones de estos recursos, para que le resulte más sencillo, en ficheros con extensión .json. Sustituya todas las representaciones por las que le devuelve su servidor una vez creados los recursos.
+Used as an example work item handler in the course "Architectures of Healthcare Services".
 
-Cree el ``Appointment`` (y sustituya ``Appointment.json`` por la representación obtenida de su servidor)
+It accepts as input the URL of an ``Appointment`` resource on an R5 FHIR server and returns the practitioner (doctor) and the patient for that appointment.
 
-Modifique el test unidad para que en lugar de utilizar el servidor hapi fhir online use su servidor local
+## Verification
 
-Ejecute y verifique que se supera el test, si no es así corríjalo hasta que los test se superen
+For testing, an ``Appointment`` resource was created on the public HAPI FHIR test server: ``https://hapi.fhir.org/baseR5/Appointment/773551``. The file named ``Appointment`` in the repository contains a JSON representation of that resource.
 
-Cree una nueva versión con la etiqueta ``EntregaP2`` y súbala a su fork en Github
+The ``resources`` folder also includes several example resource representations in ``.json`` files to help run the exercise, plus a Docker Compose file to start an R5 FHIR server in a Docker container.
+
+Running (with admin privileges) the following will start the server defined in the compose file and expose the FHIR endpoint at ``http://localhost:8888/fhir``:
+
+```powershell
+docker compose up -d
+```
+
+## Proposed exercise
+
+1. Fork this repository to your GitHub account.
+2. Clone the fork locally.
+3. Start an R5 FHIR server on your machine using the provided Docker Compose file.
+4. Create the resources referenced by the provided ``Appointment.json`` (located in the tests `resources` folder). That folder contains example JSON representations of the resources to help you; after creating the resources on your server, replace the example JSON files with the actual representations returned by your server.
+5. Create the ``Appointment`` resource (and replace ``Appointment.json`` with the representation obtained from your server).
+6. Modify the unit test so that it uses your local server instead of the public HAPI FHIR server.
+7. Run the tests and make any necessary fixes until they pass.
+8. Tag a new release called ``EntregaP2`` and push it to your GitHub fork.
+
+---
+
+If you'd like, I can also:
+
+- Add a short Quick Start section with exact commands for Windows PowerShell to run the Docker server and run the tests.
+- Add more badges (build status, test coverage) if you provide CI links.
+
+``` 

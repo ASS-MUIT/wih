@@ -4,13 +4,13 @@
 	xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>us.dit.muit.ass</groupId>
+	<groupId>us.dit.muit.hsa</groupId>
 	<artifactId>wih</artifactId>
 	<name>AppointmentDAODefinitions</name>
 	<version>0.0.1-SNAPSHOT</version>
-	<description>WI para la consulta de atributos de un objeto appointment</description>
+	<description>WI for query appointment attributes</description>
 	<organization>
-		<name>Departamento de ingeniería telemática</name>
+		<name>DIT- Telematic Engineering Department</name>
 	</organization>
 
 	<properties>
