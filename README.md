@@ -43,11 +43,3 @@ docker compose up -d
 7. Run the tests and make any necessary fixes until they pass.
 8. Tag a new release called ``EntregaP2`` and push it to your GitHub fork.
 
----
-
-If you'd like, I can also:
-
-- Add a short Quick Start section with exact commands for Windows PowerShell to run the Docker server and run the tests.
-- Add more badges (build status, test coverage) if you provide CI links.
-
-``` 
